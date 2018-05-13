@@ -1,0 +1,34 @@
+{
+    "name": "wp-erp/wp-erp",
+    "description": "An ERP Solution for WordPress",
+    "keywords": ["wordpress", "plugin", "erp", "hrm", "crm"],
+    "homepage": "https://wperp.com",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Tareq Hasan",
+            "email": "tareq@wedevs.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/database": "~5.0",
+        "tareq1988/wp-eloquent": "dev-master",
+        "johngrogg/ics-parser": "~1.0",
+        "symfony/var-dumper": "^2.8"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "WeDevs\\ERP\\": "includes/",
+            "WeDevs\\ERP\\HRM\\": "modules/hrm/includes",
+            "WeDevs\\ERP\\CRM\\": "modules/crm/includes",
+            "WeDevs\\ERP\\Accounting\\": "modules/accounting/includes"
+        },
+        "classmap": [
+            "modules/hrm/hrm.php",
+            "modules/crm/crm.php",
+            "modules/accounting/accounting.php"
+        ]
+    }
+}
